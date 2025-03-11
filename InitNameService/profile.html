@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Init Name Service</title>
+    <link rel="icon" href="elements/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid">
+        <div class="row row-cols-2 hd">
+          <div class="col df js">
+            <div class="logo">
+              <img src="elements/Logotype.svg" alt="" />
+            </div>
+          </div>
+          <div class="col df je">
+            <div class="wallet white-b pointer df jc aic">
+              <div class="text-14 connect">Connect Wallet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 df jc">
+            <div class="row claim-up df aic">
+              <div class="col df aic p-0">
+                <div class="row">
+                  <div class="col-auto aic df je">
+                    <div class="check-btn">
+                      <img src="elements/Icons/Check.svg" alt="True" />
+                    </div>
+                  </div>
+                  <div class="col text-24 white-t">“name” is available.</div>
+                </div>
+              </div>
+              <div class="col je df">
+                <div class="row df aic">
+                  <div class="col p-0">
+                    <div
+                      class="claim-btn text-14 black jc df aic wallet pointer"
+                      id="profile-claimed"
+                    >
+                      Claim now
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 df jc mt-3">
+            <div class="row profile-down">
+              <div class="col-12 jc d-grid aic inner-container">
+                <div class="text-48 units_green inner-container mt-2">
+                  name.units
+                </div>
+              </div>
+              <div class="col-12 d-grid jc">
+                <div class="inner-container">
+                  <div class="row">
+                    <div class="col-12 mb-3">
+                      <div class="row">
+                        <div class="col-auto">
+                          <div class="text-24b white-t">Address</div>
+                        </div>
+                        <div class="col p-0 aie df">
+                          <div class="line"></div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="text-24b white-t">
+                            <div class="row">
+                              <div class="col df je">7sd7c...83bd7</div>
+                              <div class="col-auto p-0 df je">
+                                <div class="address pointer">
+                                  <img
+                                    src="elements/Icons/Address.svg"
+                                    alt="icon"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <div class="row">
+                        <div class="col-auto">
+                          <div class="text-24b white-t">Ownership</div>
+                        </div>
+                        <div class="col p-0 aie df">
+                          <div class="line"></div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="text-24b white-t">
+                            <div class="row">
+                              <div class="col df je">not owned</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <script>
+      //yönlendirme
+      document
+        .getElementById("profile-claimed")
+        .addEventListener("click", function () {
+          window.location.href = "profileClaimed.html";
+        });
+    </script>
+  </body>
+</html>
