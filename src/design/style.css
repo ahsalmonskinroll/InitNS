@@ -28,6 +28,9 @@ body {
 .df {
     display: flex;
 }
+.dif{
+    display: inline-flex;
+}
 
 .aic {
     align-items: center;
@@ -254,7 +257,9 @@ input:focus {
 }
 
 /* claim.html */
-
+.claim-up{
+    width: 100%;
+}
 
 .profile-icon {
     width: 29px;
@@ -267,12 +272,6 @@ input:focus {
     object-fit: cover;
 }
 
-.claim-down {
-    background-color: #0A0A0A;
-    border: 1px solid #9FE0C1;
-    /* width: 812px;
-    height: 384px; */
-}
 
 .innerWrapper{
     padding: 20px 50px;
@@ -302,7 +301,6 @@ input:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.7s ease-in-out;
 }
@@ -364,7 +362,7 @@ input:focus {
 }
 
 .inner-container-pC {
-    width: 718px;
+    /* width: 718px; */
     /* height: 86px; */
 }
 

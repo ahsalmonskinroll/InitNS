@@ -5,6 +5,7 @@ import ReactDOM from "react-dom/client";
 import "./design/style.css"
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import Profile from './pages/profile.jsx'
+import Claim from './pages/claim.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: < Profile />,
+  },
+  {
+    path: "/claim",
+    element: < Claim />,
   },
   /*
   {
