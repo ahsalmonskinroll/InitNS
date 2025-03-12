@@ -353,13 +353,13 @@ input:focus {
 }
 
 /* profileClaimed */
-.profile-claim {
+/* .profile-claim {
     background-color: rgb(10, 10, 10);
     border: 1px solid rgb(159, 224, 193);
     width: 812px;
     height: 279px;
     padding: 0px 30px;
-}
+} */
 
 .inner-container-pC {
     /* width: 718px; */
