@@ -47,7 +47,7 @@ function Claim() {
                   <div className="innerWrapper">
                     <div className="row">
                       <div className="col-12 jc df aic">
-                        <p className="text-48 purple">
+                        <p className="text-48 purple text-center">
                           Register <span className="bold">“name.units”</span>{" "}
                           <br />
                           <span className="df jc">for 1 year</span>
@@ -92,9 +92,9 @@ function Claim() {
                           </div>
                         </div>
                         <div className="col-12 df jc my-4">
-                          <div className="claim-btn white-b pointer df jc aic">
+                          <button className="claim-btn white-b pointer df jc aic">
                             <div className="text-14">Connect Wallet</div>
-                          </div>
+                          </button>
                         </div>
                       </div>
                     </div>

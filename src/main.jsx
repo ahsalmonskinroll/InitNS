@@ -6,7 +6,6 @@ import "./design/style.css"
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import Profile from './pages/profile.jsx'
 import Claim from './pages/claim.jsx';
-import ProfileClaimed from './pages/profileClaimed.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,10 +24,6 @@ const router = createBrowserRouter([
   {
     path: "/claim",
     element: < Claim />,
-  },
-  {
-    path: "/profileClaimed",
-    element: < ProfileClaimed />,
   },
   /*
   {
