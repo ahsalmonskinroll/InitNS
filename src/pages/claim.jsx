@@ -8,11 +8,48 @@ import copyimg from "../design/assets/Icons/Copy.svg";
 import userimg from "../design/assets/Icons/User.svg";
 import Navbar from "../components/navbar";
 
+
+
 function Claim() {
   const [name, setName] = useState("");
   const handleNameChange = async (e) => {
     setName(e.target.value);
   };
+
+  // ini ve usd arası geçiş efekti
+const ToggleCurrency = () => {
+  const [activeCurrency, setActiveCurrency] = useState("eth");
+
+  return (
+    <div className="col-12">
+      <div className="eth-usd">
+        <div className="border-button">
+          <div className="toggle-container">
+            <div
+              className={`toggle-btn eth text-24 ${
+                activeCurrency === "eth" ? "active" : "inactive"
+              }`}
+              onClick={() => setActiveCurrency("eth")}
+            >
+              ini
+            </div>
+            <div
+              className={`toggle-btn usd text-24 ${
+                activeCurrency === "usd" ? "active" : "inactive"
+              }`}
+              onClick={() => setActiveCurrency("usd")}
+            >
+              USD
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
 
   return (
     <>
@@ -55,7 +92,8 @@ function Claim() {
                       </div>
                       <div className="col-12">
                         <div className="row">
-                          <div className="col-12">
+                        <ToggleCurrency />
+                          {/* <div className="col-12">
                             <div className="eth-usd">
                               <div className="border-button">
                                 <div className="toggle-container">
@@ -74,7 +112,7 @@ function Claim() {
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div> */}
                           <div className="col-12">
                             <div className="row mt-3">
                               <div className="col-auto">
@@ -182,3 +220,4 @@ function Claim() {
 }
 
 export default Claim;
+// export default ToggleCurrency;

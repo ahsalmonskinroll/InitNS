@@ -210,6 +210,9 @@ input:focus {
 }
 
 /* check */
+.check-div{
+    width: 100%;
+}
 .check-btn2 {
     background-color: #FFFFFF1F;
     border: 1px solid #FFFFFF6D;
@@ -242,6 +245,10 @@ input:focus {
 
 #infoBox {
     justify-content: center;
+}
+
+.check-name{
+    width: 100%;
 }
 
 .show {
