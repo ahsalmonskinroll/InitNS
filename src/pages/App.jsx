@@ -2,12 +2,15 @@ import { useState } from "react";
 import logo from "../design/assets/Frame.svg";
 import shapeimg from "../design/assets/shape.svg";
 import searchimg from "../design/assets/Icons/Search.svg";
+import searchredimg from "../design/assets/Icons/Searchred.svg";
 import availableimg from "../design/assets/Icons/Check.svg";
 import Navbar from "../components/navbar";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [name, setName] = useState("");
   const [isAvailable, setIsAvailable] = useState(true);
+  const navigate = useNavigate();
   const handleNameChange = async (e) => {
     setName(e.target.value);
   };
@@ -53,19 +56,22 @@ function App() {
             </div>
             <div className="col-12 middle df jc">
               <div className="unitWrapper">
-                <div className="down-div">
+                <div className={`down-div ${isAvailable}`}>
                   <div className="row">
                     <div className="col">
                       <div className="row">
                         <div className="col-auto">
                           <div className="search">
-                            <img src={searchimg} alt="Search" />
+                            <img
+                              src={isAvailable ? searchimg : searchredimg}
+                              alt="Search"
+                            />
                           </div>
                         </div>
                         <div className="col grey text-48 bold">
                           <div className="input-name">
                             <input
-                              className="text-48"
+                              className={`text-48 ${isAvailable}`}
                               placeholder="Claim your name"
                               type="text"
                               onChange={handleNameChange}
@@ -75,7 +81,13 @@ function App() {
                       </div>
                     </div>
                     <div className="col-auto">
-                      <div className="text-48 bold purple df je">.ini</div>
+                      <div
+                        className={`text-48 bold df je ${
+                          isAvailable ? "purple" : "red"
+                        }`}
+                      >
+                        .ini
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -128,7 +140,7 @@ function App() {
                       <div className="col-auto df je aic p-0">
                         <button
                           className="claim-btn text-14 black jc df aic wallet"
-                          onClick={() => (window.location.href = "claim.html")}
+                          onClick={() => navigate("/claim")}
                         >
                           Claim now
                         </button>
