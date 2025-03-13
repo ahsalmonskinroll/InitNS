@@ -7,6 +7,7 @@ import Navbar from "../components/navbar";
 
 function App() {
   const [name, setName] = useState("");
+  const [isAvailable, setIsAvailable] = useState(true);
   const handleNameChange = async (e) => {
     setName(e.target.value);
   };
@@ -92,7 +93,12 @@ function App() {
                     <div className="je">
                       <button
                         className="check-btn2 text-14 black jc df aic wallet"
-                        onClick={handleCheckClick}
+                        // onClick={handleCheckClick}
+                        // onClick = {() => setIsAvailable(!isAvailable)}
+                        onClick={() => {
+                          handleCheckClick();
+                          setIsAvailable(!isAvailable);
+                        }}
                       >
                         Check
                       </button>
@@ -108,12 +114,18 @@ function App() {
                               <img src={availableimg} alt="True" />
                             </div>
                           </div>
-                          <div className="col text-24 white-t">
-                            “{name}” is available.
-                          </div>
+                          {isAvailable ? (
+                            <div className="col text-24 white-t">
+                              “{name}” is available.
+                            </div>
+                          ) : (
+                            <div className="col text-24 red">
+                              “{name}” is unavailable.`
+                            </div>
+                          )}
                         </div>
                       </div>
-                      <div className="col df je aic p-0">
+                      <div className="col-auto df je aic p-0">
                         <button
                           className="claim-btn text-14 black jc df aic wallet"
                           onClick={() => (window.location.href = "claim.html")}
