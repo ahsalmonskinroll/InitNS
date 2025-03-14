@@ -3,7 +3,7 @@
 body {
     font-family: "Lexend", sans-serif !important;
     background-color: #0A0A0A !important;
-    background-image: url('elements/background.svg');
+    background-image: url('../design/assets/background.svg');
     height: 100%;
     background-size: cover;
 }

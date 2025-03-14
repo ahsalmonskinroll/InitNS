@@ -1,55 +1,46 @@
 import { useState } from "react";
-import logo from "../design/assets/Frame.svg";
-import shapeimg from "../design/assets/shape.svg";
-import searchimg from "../design/assets/Icons/Search.svg";
-import checkimg from "../design/assets/Icons/Check.svg";
-import addressimg from "../design/assets/Icons/Address.svg";
-import copyimg from "../design/assets/Icons/Copy.svg";
-import userimg from "../design/assets/Icons/User.svg";
+import userimg from "../design/assets/icons/user.svg";
 import Navbar from "../components/navbar";
-
-
+import { useNavigate } from "react-router-dom";
 
 function Claim() {
   const [name, setName] = useState("");
+  const navigateProfile = useNavigate();
   const handleNameChange = async (e) => {
     setName(e.target.value);
   };
 
   // ini ve usd arası geçiş efekti
-const ToggleCurrency = () => {
-  const [activeCurrency, setActiveCurrency] = useState("eth");
+  const ToggleCurrency = () => {
+    const [activeCurrency, setActiveCurrency] = useState("eth");
 
-  return (
-    <div className="col-12">
-      <div className="eth-usd">
-        <div className="border-button">
-          <div className="toggle-container">
-            <div
-              className={`toggle-btn eth text-24 ${
-                activeCurrency === "eth" ? "active" : "inactive"
-              }`}
-              onClick={() => setActiveCurrency("eth")}
-            >
-              ini
-            </div>
-            <div
-              className={`toggle-btn usd text-24 ${
-                activeCurrency === "usd" ? "active" : "inactive"
-              }`}
-              onClick={() => setActiveCurrency("usd")}
-            >
-              USD
+    return (
+      <div className="col-12">
+        <div className="eth-usd">
+          <div className="border-button">
+            <div className="toggle-container">
+              <div
+                className={`toggle-btn eth text-24 ${
+                  activeCurrency === "eth" ? "active" : "inactive"
+                }`}
+                onClick={() => setActiveCurrency("eth")}
+              >
+                ini
+              </div>
+              <div
+                className={`toggle-btn usd text-24 ${
+                  activeCurrency === "usd" ? "active" : "inactive"
+                }`}
+                onClick={() => setActiveCurrency("usd")}
+              >
+                USD
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-
-
+    );
+  };
 
   return (
     <>
@@ -92,7 +83,7 @@ const ToggleCurrency = () => {
                       </div>
                       <div className="col-12">
                         <div className="row">
-                        <ToggleCurrency />
+                          <ToggleCurrency />
                           {/* <div className="col-12">
                             <div className="eth-usd">
                               <div className="border-button">
@@ -131,7 +122,12 @@ const ToggleCurrency = () => {
                         </div>
                         <div className="col-12 df jc my-4">
                           <button className="claim-btn white-b pointer df jc aic">
-                            <div className="text-14">Connect Wallet</div>
+                            <div
+                              className="text-14"
+                              onClick={() => navigateProfile("/profile")}
+                            >
+                              Connect Wallet
+                            </div>
                           </button>
                         </div>
                       </div>

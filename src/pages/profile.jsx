@@ -1,11 +1,7 @@
 import { useState } from "react";
-import logo from "../design/assets/Frame.svg";
-import shapeimg from "../design/assets/shape.svg";
-import searchimg from "../design/assets/Icons/Search.svg";
-import checkimg from "../design/assets/Icons/Check.svg";
-import addressimg from "../design/assets/Icons/Address.svg";
-import userimg from "../design/assets/Icons/User.svg";
-import copyimg from "../design/assets/Icons/Copy.svg";
+import checkimg from "../design/assets/icons/check.svg";
+import userimg from "../design/assets/icons/user.svg";
+import copyimg from "../design/assets/icons/copy.svg";
 import Navbar from "../components/navbar";
 
 function Profile() {
@@ -107,7 +103,7 @@ function Profile() {
 
           :
           <div className="row">
-                      <div className="col-12 df jc">
+                      <div className="col-12 df jc mb-3">
                         <div className="unitWrapper">
                           <div className="row df aic">
                             <div className="col-auto">

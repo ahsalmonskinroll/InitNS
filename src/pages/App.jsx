@@ -1,9 +1,8 @@
 import { useState } from "react";
-import logo from "../design/assets/Frame.svg";
 import shapeimg from "../design/assets/shape.svg";
-import searchimg from "../design/assets/Icons/Search.svg";
-import searchredimg from "../design/assets/Icons/Searchred.svg";
-import availableimg from "../design/assets/Icons/Check.svg";
+import searchimg from "../design/assets/icons/search.svg";
+import searchredimg from "../design/assets/icons/searchred.svg";
+import availableimg from "../design/assets/icons/check.svg";
 import Navbar from "../components/navbar";
 import { useNavigate } from "react-router-dom";
 
@@ -11,9 +10,11 @@ function App() {
   const [name, setName] = useState("");
   const [isAvailable, setIsAvailable] = useState(true);
   const navigate = useNavigate();
+
   const handleNameChange = async (e) => {
     setName(e.target.value);
   };
+  const handleIsNameAvailable = async (e) => {};
 
   // check butonu değişimi
   const [button, setButton] = useState("");
@@ -109,7 +110,7 @@ function App() {
                         // onClick = {() => setIsAvailable(!isAvailable)}
                         onClick={() => {
                           handleCheckClick();
-                          setIsAvailable(!isAvailable);
+                          handleIsNameAvailable();
                         }}
                       >
                         Check
