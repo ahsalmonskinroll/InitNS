@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+body {
+    font-family: "Lexend", sans-serif !important;
+    background-color: #0A0A0A !important;
+    background-image: url("../assets/background.svg");
+    height: 100%;
+    background-size: cover;
+}
+
+// colors
+$purple: #8B2EF9;
+$light-purple: #DEC3FF;
+$units-green: #9FE0C1;
+$white: #F8F8F8;
+$black: #0A0A0A;
+$red: #F69798;
+$grey: #8C8C8C;
+
+.purple { color: $purple; }
+.light_purple { color: $light-purple; }
+.units_green { color: $units-green; }
+.white-t { color: $white; }
+.white-b { background-color: $white; }
+.black-b { background-color: $black; }
+.red { color: $red; }
+.grey { color: $grey; }
+
+// fontlar
+%font-bold { font-weight: 700; }
+%font-medium { font-weight: 600; }
+
+.bold { @extend %font-bold; }
+.medium { @extend %font-medium; }
+
+@mixin text-size($size) {
+    font-size: $size;
+}
+
+.text-48 { @include text-size(48px); }
+.text-48g {
+    @include text-size(48px);
+    font-weight: 400;
+    color: $grey
+}
+.text-32 { @include text-size(32px); }
+.text-24 { @include text-size(24px); }
+.text-14 { @include text-size(14px); }
+
+// genel
+::selection {
+    color: $black;
+    background-color: $purple;
+}
+
+.pointer {
+    cursor: pointer;
+}
+%flex {
+    display: flex;
+}
+
+%inline-flex {
+    display: inline-flex;
+}
+.jc { justify-content: center; }
+.js { justify-content: start; }
+.je { justify-content: end; }
+.df { @extend %flex; }
+.dif { @extend %inline-flex; }
+.aic { align-items: center; }
+
+// header
+header {
+    background: linear-gradient(to bottom, $black, rgba($black, 0));
+    height: 122px;
+}
+
+.hd {
+    height: 122px;
+    padding: 32px 80px;
+}
+
+.logo {
+    width: 450px;
+    height: auto;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.wallet {
+    border: 1px solid $white;
+    z-index: 0;
+    padding: 10px;
+    &:hover {
+        background-color: rgba($white, 0.12);
+        color: $white;
+        transition: 0.5s;
+    }
+    &:active {
+        background-color: rgba($white, 0.04);
+        color: rgba($white, 0.43);
+        transition: 0.5s;
+    }
+}
+
+// article
+.unitWrapper {
+    width: 50vw;
+}
+
+.row-up {
+    gap: 51px;
+    padding: 40px 0;
+}
+
+.shape {
+    width: 22px;
+    height: 43px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.down-div {
+    height: 141px;
+    border: 1px solid $purple;
+    padding: 31px 30px;
+    background-color: $black;
+    &.false {
+        border: 1px solid $red;
+    }
+    &:hover {
+        box-shadow: 0px 0px 20px 2px $grey;
+        transition: 0.5s;
+    }
+    &:active {
+        border: 1px solid $white;
+        box-shadow: 0px 0px 4px 0px $grey;
+    }
+}
+.search {
+	width: 60.9px;
+	height: 62.4px;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+input {
+    padding: 10px;
+    border: none;
+    background-color: $black;
+    width: 100%;
+    color: $purple;
+    transition: color 0.3s ease-in-out;
+    &.false {
+        color: $red;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+.input-name {
+	bottom: 10px;
+	position: relative;
+}
+.check-div {
+	width: 100%;
+}
+
+// butonlar
+.check-btn2 {
+    background-color: rgba($white, 0.12);
+    border: 1px solid rgba($white, 0.43);
+    color: rgba($white, 0.43);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.claim-btn {
+    background-color: $white;
+    border: 1px solid $white;
+    transition: background-color 0.3s ease-in-out;
+    padding: 17px 15px;
+    &:hover {
+        background-color: rgba($white, 0.12);
+        color: $white;
+        transition: 0.5s;
+    }
+    &:active {
+        background-color: rgba($white, 0.04);
+        color: rgba($white, 0.43);
+        transition: 0.5s;
+    }
+}
+
+.clicked {
+    background-color: rgba($white, 0.04) !important;
+    color: rgba($white, 0.43) !important;
+}
+
+#infoBox {
+	justify-content: center;
+}
+
+.check-name {
+	width: 100%;
+}
+.show {
+	opacity: 1;
+	transform: scale(1);
+}
+.claim-up {
+	width: 100%;
+}
+.profile-icon {
+	width: 29px;
+	height: 30px;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.innerWrapper {
+	padding: 20px 50px;
+}
+.eth-usd {
+	justify-content: end;
+	display: flex;
+	align-items: center;
+}
+
+.border-button {
+	border: $white 1px solid;
+	padding: 2px;
+}
+
+.toggle-container {
+    width: 146px;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid $black;
+}
+
+.toggle-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.7s ease-in-out;
+}
+
+.eth {
+    background-color: $white;
+    color: $black;
+}
+
+.usd {
+    background-color: $black;
+    color: $white;
+}
+
+.active {
+    background-color: $white !important;
+    color: $black !important;
+}
+
+.inactive {
+    background-color: $black !important;
+    color: $white !important;
+}
+
+.line {
+	height: 1px;
+	background: $white;
+	width: 100%;
+	margin-top: 25px;
+	&:hover {
+		box-shadow: 0px 0px 9px 2px $grey;
+	}
+}
+.profile-down {
+	background-color: $black;
+	border: 1px solid $purple;
+	width: 100%;
+}
+.address {
+	width: 24px;
+	height: auto;
+	align-items: start;
+	display: flex;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+.wallet-border {
+	border: 1px solid $white;
+	background-color: $black;
+	z-index: 0;
+	padding: 10px;
+}
+.wallet-img {
+	width: 24px;
+	height: 24px;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
